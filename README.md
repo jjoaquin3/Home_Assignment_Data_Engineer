@@ -39,25 +39,28 @@ Este proyecto procesa datos de ventas desde un archivo CSV, los limpia, los alma
 ---
 
 ## ** 2. Cómo Levantar el Proyecto**
-### **🔹 1️⃣ Clonar el repositorio**
+### **🔹 Clonar el repositorio**
 ```bash
-git clone https://github.com/tuusuario/sales-dashboard.git
-cd sales-dashboard/Stack
+git clone https://github.com/jjoaquin3/Home_Assignment_Data_Engineer
+cd Home_Assignment_Data_Engineer/Stack
 ```
 
-### **🔹 2️⃣ Construir y levantar los contenedores con Docker**
+### **🔹 Construir y levantar los contenedores con Docker**
 ```bash
 docker-compose up --build -d
 ```
  Esto levanta los servicios de **Spark, SQLite y FastAPI**.
 
-### **🔹 3️⃣ Ejecutar el procesamiento de datos en Spark**
+### **🔹 Ejecutar el procesamiento de datos en Spark**
 Abrir Jupyter Notebook desde Spark en `http://localhost:8888` y ejecutar:
 - **`Solution/Scripts/Solution_Spark.ipynb`**
 
+o bien abril usar como Remote Jupyter Server con http://127.0.0.1:8888/tree como kernel para ejecución
+- **`Solution/Scripts/Solution_Spark.ipynb`**
+  
 Esto procesará los datos y los guardará en SQLite.
 
-### **🔹 4️⃣ Probar la API en Swagger UI**
+### **🔹 Probar la API en Swagger UI**
 Acceder a **Swagger UI** en:
 ```
 http://localhost:8000/docs
@@ -98,7 +101,7 @@ http://localhost:8000/redoc
 ---
 
 ## ** 4. Ejemplos de Uso con Postman**
-### **🔹 1️⃣ Obtener ventas por producto con filtros**
+### **🔹 Obtener ventas por producto con filtros**
  **Cuerpo JSON (Body -> raw -> JSON)**
 ```json
 {
@@ -120,7 +123,7 @@ curl -X 'POST' 'http://localhost:8000/v2/sales/product' \
 }'
 ```
 
-### **🔹 2️⃣ Obtener ventas por día en un rango de fechas**
+### **🔹 Obtener ventas por día en un rango de fechas**
 ```json
 {
     "start_date": "2024-07-01",
