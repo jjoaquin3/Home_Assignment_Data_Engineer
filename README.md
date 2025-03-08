@@ -62,10 +62,19 @@ Acceder a **Swagger UI** en:
 ```
 http://localhost:8000/docs
 ```
+
+<a href="solution/images/A1.JPG" target="_blank">
+    <img src="solution/images/A1.JPG" alt="Docs1" width="400px">
+</a>
+
+
 🔹 **Redoc UI (alternativa)**:  
 ```
 http://localhost:8000/redoc
 ```
+<a href="solution/images/A2.JPG" target="_blank">
+    <img src="solution/images/A2.JPG" alt="Docs2" width="400px">
+</a>
 
 ---
 
@@ -140,5 +149,4 @@ Esto detendrá y eliminará los contenedores sin borrar los datos almacenados en
 
 ---
 
-🔥 **¡Listo! Ahora tienes un README documentado para GitHub.** 🚀
-
+🔥 **¡Listo! 
