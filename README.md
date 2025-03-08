@@ -63,8 +63,8 @@ Acceder a **Swagger UI** en:
 http://localhost:8000/docs
 ```
 
-<a href="solution/images/A1.JPG" target="_blank">
-    <img src="solution/images/A1.JPG" alt="Docs1" width="400px">
+<a href="https://github.com/jjoaquin3/Home_Assignment_Data_Engineer/blob/main/Solution/Images/A1.JPG?raw=true" target="_blank">
+    <img src="https://github.com/jjoaquin3/Home_Assignment_Data_Engineer/blob/main/Solution/Images/A1.JPG?raw=true" alt="Docs1" width="400px">
 </a>
 
 
@@ -72,8 +72,8 @@ http://localhost:8000/docs
 ```
 http://localhost:8000/redoc
 ```
-<a href="solution/images/A2.JPG" target="_blank">
-    <img src="solution/images/A2.JPG" alt="Docs2" width="400px">
+<a href="https://github.com/jjoaquin3/Home_Assignment_Data_Engineer/blob/main/Solution/Images/A2.JPG?raw=true" target="_blank">
+    <img src="https://github.com/jjoaquin3/Home_Assignment_Data_Engineer/blob/main/Solution/Images/A2.JPG?raw=true" alt="Docs2" width="400px">
 </a>
 
 ---
