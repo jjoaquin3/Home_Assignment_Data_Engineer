@@ -1,0 +1,6 @@
+pyspark
+pandas
+sqlalchemy
+pysqlite3-binary
+tabulate
+taipy

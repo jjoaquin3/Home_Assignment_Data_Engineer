@@ -1,0 +1,7 @@
+pandas
+sqlalchemy
+pysqlite3-binary
+tabulate
+taipy
+pydantic
+fastapi[standard]

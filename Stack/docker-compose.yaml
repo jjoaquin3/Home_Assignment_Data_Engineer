@@ -1,0 +1,53 @@
+services:
+  spark:
+    build:
+      context: ./Spark
+      dockerfile: Dockerfile
+    container_name: pyspark-notebook
+    volumes:
+      - ../Solution/Scripts:/home/jovyan/work/scripts
+      - ../Solution/Dataset:/home/jovyan/work/dataset
+      - ../Stack/SQLite/data:/home/jovyan/work/data  # Volumen para que Spark vea la misma DB de SQLite
+    ports:
+      - 8888:8888
+      - 4040:4040
+    command: start.sh jupyter notebook --NotebookApp.token='' --NotebookApp.disable_check_xsrf=true --NotebookApp.allow_origin='*' --NotebookApp.ip='0.0.0.0'
+    networks: 
+      - stack_network
+
+  sqlite:
+    
+    build:
+      context: ./SQLite
+      dockerfile: Dockerfile
+    container_name: sqlite-alpine
+    volumes:
+      - ../Stack/SQLite/data:/db  # Volumen donde se almacenará la base de datos
+    env_file:
+      - ../Stack/SQLite/.env
+    command: "sqlite3"
+    stdin_open: true
+    tty: true
+    networks: 
+      - stack_network
+  
+  fastapi:
+    build:
+      context: ./FastAPI
+      dockerfile: Dockerfile
+    container_name: fastapi-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../Solution/API:/workspace/api  # Código de FastAPI
+      - ../Stack/SQLite/data:/workspace/db  # Base de datos SQLite
+      - ../Solution/Scripts/SQL:/workspace/sql  # Consultas SQL
+    restart: always
+    depends_on:
+      - sqlite  # Asegurar que SQLite esté disponible
+    networks:
+      - stack_network
+
+networks:
+  stack_network:
+    driver: bridge
